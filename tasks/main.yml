@@ -1,2 +1,11 @@
 ---
 # tasks file for add_check_pm2_proc_monitoring
+  - include: installNpmAndPm2.yml
+
+  - include: copyTheNrpeDotDConfig.yml
+
+  - include: copyTheSudoersDotDConfig.yml
+
+  - include: changeUserShellOfNrpe.yml
+
+  - include: finalTest.yml

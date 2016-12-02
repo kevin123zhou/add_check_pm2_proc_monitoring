@@ -1,0 +1,3 @@
+---
+  - name: Install the check_pm2 global
+    npm: name=check_pm2 global=yes registry={{npm_registry}}

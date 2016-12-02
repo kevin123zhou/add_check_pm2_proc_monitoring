@@ -1,0 +1,4 @@
+ - name: Ensure the nrpe.d config of nrpe on clients.
+   template: >
+     src="{{nrpe_files_path}}"
+     dest="{{nrpe_files_dest_path}}"

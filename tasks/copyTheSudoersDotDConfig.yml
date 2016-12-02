@@ -1,0 +1,11 @@
+---
+  - name: Ensure the permissons of nrpe on clients.
+    template: >
+      src="{{nrpe_sudoers_files_path}}"
+      dest="{{nrpe_sudoers_files_tmp}}"
+      owner=root
+      group=root
+      mode=440
+
+  - name: Check the sudoer.d config
+    command: "visudo -cq -f {{nrpe_sudoers_files_tmp}} && /bin/cp -f {{nrpe_sudoers_files_tmp}} {{nrpe_sudoers_files_dest_path}}"
