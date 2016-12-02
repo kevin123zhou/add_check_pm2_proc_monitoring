@@ -6,6 +6,9 @@
       owner=root
       group=root
       mode=440
+      force=yes
 
   - name: Check the sudoer.d config
-    command: "visudo -cq -f {{nrpe_sudoers_files_tmp}} && /bin/cp -f {{nrpe_sudoers_files_tmp}} {{nrpe_sudoers_files_dest_path}}"
+    command: visudo -cq -f {{nrpe_sudoers_files_tmp}} 
+    
+  - command: /bin/cp -f {{nrpe_sudoers_files_tmp}} {{nrpe_sudoers_files_dest_path}}
