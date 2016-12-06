@@ -1,0 +1,7 @@
+---
+  - name: link from {{pm2_run_username}}.pm2 to root
+    file: 
+      src: ~{{pm2_run_username}}/.pm2
+      dest: ~root/.pm2
+      state: link
+      force: yes

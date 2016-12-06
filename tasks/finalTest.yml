@@ -2,6 +2,6 @@
   - name: Run the script monitoring to check if it work
     become: yes
     become_user: nrpe
-    command: check_pm2 -A -s
+    command: sudo check_pm2 -A -s
     ignore_errors: yes
     notify: restart the nrpe service on servers

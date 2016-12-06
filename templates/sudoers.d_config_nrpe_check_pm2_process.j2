@@ -1,2 +1,2 @@
 Defaults:{{"nrpe" if ansible_os_family == "RedHat" else "nagios"}} !requiretty
-{{"nrpe" if ansible_os_family == "RedHat" else "nagios"}} ALL=({{pm2_run_username}}) NOPASSWD: {{"/usr/bin/check_pm2" if ansible_os_family == "RedHat" else "/usr/local/bin/check_pm2"}} -A -s
+{{"nrpe" if ansible_os_family == "RedHat" else "nagios"}} ALL=NOPASSWD: {% if ansible_distribution == "Amazon" %}/usr/local/bin/check_pm2{% elif ansible_distribution == "Ubuntu" %}/usr/local/bin/check_pm2{% elif ansible_distribution == "CentOS" %}/usr/bin/check_pm2{% endif %} -A -s
