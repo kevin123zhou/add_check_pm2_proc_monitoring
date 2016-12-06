@@ -11,26 +11,24 @@ Requirements
 Role Variables
 --------------
 
-＃npm代理源配置（国外需建议改为官方源）
-npm_registry: registry.npm.taobao.org
-＃pm2的运行用户，一台上只能有一个。因为本脚本会建立该用户到root主目录下的软连接。
-pm2_run_username: nginx
-＃nrpe的配置文件模版路径。（默认）
-nrpe_files_path: templates/nrpe.d_config_check_pm2_process.j2
-＃客户端的nrpe配置文件路径。（默认）
-nrpe_files_dest_path: "{{'/etc/nrpe.d/check_pm2_process' if ansible_os_family == 'RedHat' else '/etc/nagios/nrpe.d/check_pm2_process'}}"
-nrpe_files_dest_path_ubuntu: /etc/nagios/nrpe.d/check_pm2_process
-＃sudoers配置模版路径。（默认）
-nrpe_sudoers_files_path: templates/sudoers.d_config_nrpe_check_pm2_process.j2
-nrpe_sudoers_files_tmp: /tmp/nrpe_check_pm2_process
-＃客户端的sudoers配置文件存放路径（默认）
-nrpe_sudoers_files_dest_path: /etc/sudoers.d/nrpe_check_pm2_process
+    ＃npm代理源配置（国外需建议改为官方源）
+    npm_registry: registry.npm.taobao.org
+    ＃pm2的运行用户，一台上只能有一个。因为本脚本会建立该用户到root主目录下的软连接。
+    pm2_run_username: nginx
+    ＃nrpe的配置文件模版路径。（默认）
+    nrpe_files_path: templates/nrpe.d_config_check_pm2_process.j2
+    ＃客户端的nrpe配置文件路径。（默认）
+    nrpe_files_dest_path: "{{'/etc/nrpe.d/check_pm2_process' if ansible_os_family == 'RedHat' else '/etc/nagios/nrpe.d/check_pm2_process'}}"
+    nrpe_files_dest_path_ubuntu: /etc/nagios/nrpe.d/check_pm2_process
+    ＃sudoers配置模版路径。（默认）
+    nrpe_sudoers_files_path: templates/sudoers.d_config_nrpe_check_pm2_process.j2
+    nrpe_sudoers_files_tmp: /tmp/nrpe_check_pm2_process
+    ＃客户端的sudoers配置文件存放路径（默认）
+    nrpe_sudoers_files_dest_path: /etc/sudoers.d/nrpe_check_pm2_process
 
 
 Example Playbook
 ----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
     - hosts: servers
       become: yes
