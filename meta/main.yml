@@ -20,6 +20,4 @@ galaxy_info:
   galaxy_tags:
       - nagios
       - pm2
-dependencies: 
-      - npm 
-      - nrpe
+dependencies: []
