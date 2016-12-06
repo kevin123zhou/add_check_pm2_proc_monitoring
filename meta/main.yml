@@ -1,23 +1,21 @@
 galaxy_info:
-  description: kevin zhou
+  description: 自用check_pm2的nagios客户端安装脚本。由于存在sudo提权，安全性上有一定的风险，需要小心使用，保护普通账户的安全。
   author: "Kevin Zhou"
   company: AnsibleWorks
   license: license (BSD)
-  min_ansible_version: 1.4 
+  min_ansible_version: 2.2.0.0 
   platforms:
-   - name: EL
+   - name: Amazon
      versions:
-      - 5
-      - 6
-   - name: Fedora
+      - 2015
+      - 2016
+   - name: CentOS
      versions:
-      - 16
-      - 17
-      - 18
+      - 6.6
    - name: Ubuntu
      versions:
       - precise
       - quantal
       - raring
       - saucy
-dependencies: []
+dependencies: [npm]
