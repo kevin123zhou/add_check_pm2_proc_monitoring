@@ -7,11 +7,10 @@ galaxy_info:
   platforms:
    - name: Amazon
      versions:
-      - 2015
-      - 2016
-   - name: CentOS
+      - all
+   - name: EL
      versions:
-      - 6.6
+      - 6
    - name: Ubuntu
      versions:
       - precise
