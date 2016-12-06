@@ -1,7 +1,7 @@
 add_check_pm2_proc_monitoring
 =========
 
-自用check_pm2的nagios客户端安装脚本。由于存在sudo提权，安全性上有一定的风险，需要小心使用，保护普通账户的安全。
+自用check_pm2的nagios客户端安装脚本。由于存在sudo提权，安全性上有一定的风险，需要小心使用，保护普通账户的安全。另外为了防止覆盖root目录下已存在的.pm2文件，未提供强制覆盖既有.pm2文件夹的功能。如果root下有该文件夹会报错。
 
 Requirements
 ------------
