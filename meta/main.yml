@@ -1,5 +1,5 @@
 galaxy_info:
-  description: 自用check_pm2的nagios客户端安装脚本。由于存在sudo提权，安全性上有一定的风险，需要小心使用，保护普通账户的安全。
+  description: 用于nagios的check_pm2的客户端插件安装。
   author: "Kevin Zhou"
   company: AnsibleWorks
   license: license (BSD)
