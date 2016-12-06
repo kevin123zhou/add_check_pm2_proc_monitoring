@@ -18,4 +18,7 @@ galaxy_info:
       - quantal
       - raring
       - saucy
+  galaxy_tags:
+      - nagios
+      - pm2
 dependencies: [npm]
