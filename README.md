@@ -6,7 +6,7 @@ add_check_pm2_proc_monitoring
 Requirements
 ------------
 
-请使用ansible-2.2.00其他版本未进行测试。另外需要已经安装有npm。过低版本的npm会无法安装check_pm2。
+请使用ansible-2.2.00其他版本未进行测试。另外需要已经安装有npm和nrpe客户端。过低版本的npm会无法安装check_pm2。
 
 Role Variables
 --------------
